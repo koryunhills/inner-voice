@@ -2,6 +2,10 @@
 
 An audio visualization experiment that creates an interactive visual representation of sound using SVG animations. The visualization consists of five elements that respond to different frequency ranges of audio input.
 
+## Live Demo
+
+Visit [https://koryunhills.github.io/inner-voice/](https://koryunhills.github.io/inner-voice/) to try it out!
+
 ## Features
 
 - Real-time audio visualization using Web Audio API
@@ -11,15 +15,15 @@ An audio visualization experiment that creates an interactive visual representat
 - Device selection support
 - Responsive design
 
-## Setup
+## Local Setup
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/inner-voice.git
+git clone https://github.com/koryunhills/inner-voice.git
 cd inner-voice
 ```
 
-2. Open `animated-svg.html` in a modern web browser.
+2. Open `index.html` in a modern web browser.
 
 3. Click "Start Microphone" and allow microphone access to begin visualization.
 
