@@ -11,7 +11,7 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #000000;
+            background-color: #1A2A50;
             margin: 0;
             color: white;
             font-family: sans-serif;
@@ -56,19 +56,23 @@
         }
         
         .svg-container {
-            width: 50px;
+            width: 300px;
             height: 280px;
             position: relative;
+            overflow: visible; /* Allow SVG to overflow its container */
         }
 
         svg {
             width: 100%;
             height: 100%;
+            overflow: visible; /* Allow paths to overflow SVG boundary */
+            color:white;
         }
         
         .r-path {
             transform-origin: center;
             transition: d 0.08s ease-out;
+            color:white;
         }
         
         #debug-info {
@@ -77,6 +81,7 @@
             left: 10px;
             font-size: 12px;
             opacity: 0.7;
+            color: white;
         }
     </style>
 </head>
@@ -91,28 +96,14 @@
     </div>
     <div class="svg-container-wrapper">
         <div class="svg-container">
-            <svg width="15" height="60" viewBox="0 0 15 60" preserveAspectRatio="xMidYMid meet" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path class="r-path" d="M15 30C1.6278 35.8581 13.8786 46.6175 8 60C2.12138 46.6175 13.3619 35.8581 0 30C13.3722 24.1419 2.12138 13.3825 8 0C13.8786 13.3825 1.63809 24.1419 15 30Z" fill="#0066FF"/>
-            </svg>
-        </div>
-        <div class="svg-container">
-            <svg width="15" height="60" viewBox="0 0 15 60" preserveAspectRatio="xMidYMid meet" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path class="r-path" d="M15 30C1.6278 35.8581 13.8786 46.6175 8 60C2.12138 46.6175 13.3619 35.8581 0 30C13.3722 24.1419 2.12138 13.3825 8 0C13.8786 13.3825 1.63809 24.1419 15 30Z" fill="#0066FF"/>
-            </svg>
-        </div>
-        <div class="svg-container">
-            <svg width="15" height="60" viewBox="0 0 15 60" preserveAspectRatio="xMidYMid meet" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path class="r-path" d="M15 30C1.6278 35.8581 13.8786 46.6175 8 60C2.12138 46.6175 13.3619 35.8581 0 30C13.3722 24.1419 2.12138 13.3825 8 0C13.8786 13.3825 1.63809 24.1419 15 30Z" fill="#0066FF"/>
-            </svg>
-        </div>
-        <div class="svg-container">
-            <svg width="15" height="60" viewBox="0 0 15 60" preserveAspectRatio="xMidYMid meet" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path class="r-path" d="M15 30C1.6278 35.8581 13.8786 46.6175 8 60C2.12138 46.6175 13.3619 35.8581 0 30C13.3722 24.1419 2.12138 13.3825 8 0C13.8786 13.3825 1.63809 24.1419 15 30Z" fill="#0066FF"/>
-            </svg>
-        </div>
-        <div class="svg-container">
-            <svg width="15" height="60" viewBox="0 0 15 60" preserveAspectRatio="xMidYMid meet" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path class="r-path" d="M15 30C1.6278 35.8581 13.8786 46.6175 8 60C2.12138 46.6175 13.3619 35.8581 0 30C13.3722 24.1419 2.12138 13.3825 8 0C13.8786 13.3825 1.63809 24.1419 15 30Z" fill="#0066FF"/>
+            <!-- Center the SVG in its container for better positioning -->
+            <svg width="300" height="280" viewBox="0 0 200 60" preserveAspectRatio="xMidYMid meet" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Center the group of paths and space them evenly with no gaps -->
+                <path class="r-path" transform="translate(85, 0)" d="M15 30C1.6278 35.8581 13.8786 46.6175 8 60C2.12138 46.6175 13.3619 35.8581 0 30C13.3722 24.1419 2.12138 13.3825 8 0C13.8786 13.3825 1.63809 24.1419 15 30Z" fill="white"/>
+                <path class="r-path" transform="translate(100, 0)" d="M15 30C1.6278 35.8581 13.8786 46.6175 8 60C2.12138 46.6175 13.3619 35.8581 0 30C13.3722 24.1419 2.12138 13.3825 8 0C13.8786 13.3825 1.63809 24.1419 15 30Z" fill="white"/>
+                <path class="r-path" transform="translate(115, 0)" d="M15 30C1.6278 35.8581 13.8786 46.6175 8 60C2.12138 46.6175 13.3619 35.8581 0 30C13.3722 24.1419 2.12138 13.3825 8 0C13.8786 13.3825 1.63809 24.1419 15 30Z" fill="white"/>
+                <path class="r-path" transform="translate(130, 0)" d="M15 30C1.6278 35.8581 13.8786 46.6175 8 60C2.12138 46.6175 13.3619 35.8581 0 30C13.3722 24.1419 2.12138 13.3825 8 0C13.8786 13.3825 1.63809 24.1419 15 30Z" fill="white"/>
+                <path class="r-path" transform="translate(145, 0)" d="M15 30C1.6278 35.8581 13.8786 46.6175 8 60C2.12138 46.6175 13.3619 35.8581 0 30C13.3722 24.1419 2.12138 13.3825 8 0C13.8786 13.3825 1.63809 24.1419 15 30Z" fill="white"/>
             </svg>
         </div>
     </div>
@@ -135,11 +126,11 @@
 
         // Animation keyframes for the R shape
         const keyframes = [
-            { // Default state
-                rightX: 15,
-                leftX: 0,
-                topY: 0,
-                bottomY: 60,
+            { // Default state - exact size of R.svg
+                rightX: 15,   // Original R.svg width
+                leftX: 0,     // Original left edge
+                topY: 0,      // Original top edge
+                bottomY: 60,  // Original bottom edge
                 centerY: 30,
                 centerX: 8
             },
@@ -152,10 +143,10 @@
                 centerX: 8
             },
             { // Expanded state
-                rightX: 18,
-                leftX: -3,
-                topY: -10,
-                bottomY: 70,
+                rightX: 27,   // Larger when expanded
+                leftX: -12,
+                topY: -17,
+                bottomY: 77,
                 centerY: 30,
                 centerX: 8
             }
@@ -244,46 +235,10 @@
                 cancelAnimationFrame(animationFrame);
             }
             
-            const startTime = performance.now() / 1000;
-            
-            function animate() {
-                // Calculate current time in the animation cycle
-                const currentTime = (performance.now() / 1000 - startTime) % totalDuration;
-                const progress = currentTime / totalDuration;
-                
-                // Animate each path with slight delays for visual interest
-                paths.forEach((path, index) => {
-                    // Add delay between elements for wave effect
-                    const delay = index * 0.2;
-                    const delayedProgress = (progress + delay) % 1;
-                    
-                    // Simple sinusoidal animation
-                    const wave = Math.sin(delayedProgress * Math.PI * 2);
-                    const normalizedWave = (wave + 1) / 2; // Convert from [-1,1] to [0,1]
-                    
-                    // Use easing to make the animation more aggressive at certain points
-                    const easedWave = normalizedWave < 0.5 ? 
-                        2 * Math.pow(normalizedWave, 2) : 
-                        1 - Math.pow(-2 * normalizedWave + 2, 2) / 2;
-                    
-                    // Create animation state
-                    // For more aggressive contraction, use power curve to emphasize extremes
-                    const state = {
-                        rightX: lerp(keyframes[0].rightX, keyframes[2].rightX, easedWave),
-                        leftX: lerp(keyframes[0].leftX, keyframes[2].leftX, easedWave),
-                        topY: lerp(keyframes[0].topY, keyframes[2].topY, easedWave),
-                        bottomY: lerp(keyframes[0].bottomY, keyframes[2].bottomY, easedWave),
-                        centerY: 30,
-                        centerX: 8
-                    };
-                    
-                    updatePath(path, state);
-                });
-                
-                animationFrame = requestAnimationFrame(animate);
-            }
-            
-            animate();
+            // Set all paths to their default state without animation
+            paths.forEach((path) => {
+                updatePath(path, keyframes[0]);
+            });
         }
         
         // Cubic bezier easing function based on animation.json (0.75, 0.75, 0.25, 0.25)
@@ -481,20 +436,31 @@
                 // Emphasize intensity to make the effect more dramatic
                 const enhancedIntensity = Math.pow(intensity, 0.7); // Make low-mid values stronger
                 
-                // During quiet moments, use the contracted state to squeeze the shape
-                // As volume increases, expand more aggressively
+                // Create a proper transition between default state and animation states
                 let targetState;
-                if (enhancedIntensity < 0.1) {
-                    // Very quiet - go to most contracted state
-                    targetState = keyframes[1];
-                } else {
-                    // For other volumes, interpolate toward expanded state
-                    // with a power curve for more dramatic transitions
+                
+                if (enhancedIntensity < 0.05) {
+                    // At very low levels (near 0), use exact R.svg size (keyframe 0)
+                    targetState = keyframes[0];
+                } else if (enhancedIntensity < 0.2) {
+                    // At low levels, transition between default and contracted
+                    const normalizedIntensity = enhancedIntensity / 0.2;
                     targetState = {
-                        rightX: lerp(keyframes[1].rightX, keyframes[2].rightX, enhancedIntensity),
-                        leftX: lerp(keyframes[1].leftX, keyframes[2].leftX, enhancedIntensity),
-                        topY: lerp(keyframes[1].topY, keyframes[2].topY, enhancedIntensity),
-                        bottomY: lerp(keyframes[1].bottomY, keyframes[2].bottomY, enhancedIntensity),
+                        rightX: lerp(keyframes[0].rightX, keyframes[1].rightX, normalizedIntensity),
+                        leftX: lerp(keyframes[0].leftX, keyframes[1].leftX, normalizedIntensity),
+                        topY: lerp(keyframes[0].topY, keyframes[1].topY, normalizedIntensity),
+                        bottomY: lerp(keyframes[0].bottomY, keyframes[1].bottomY, normalizedIntensity),
+                        centerY: 30,
+                        centerX: 8
+                    };
+                } else {
+                    // At higher levels, transition to expanded state
+                    const normalizedIntensity = (enhancedIntensity - 0.2) / 0.8;
+                    targetState = {
+                        rightX: lerp(keyframes[1].rightX, keyframes[2].rightX, normalizedIntensity),
+                        leftX: lerp(keyframes[1].leftX, keyframes[2].leftX, normalizedIntensity),
+                        topY: lerp(keyframes[1].topY, keyframes[2].topY, normalizedIntensity),
+                        bottomY: lerp(keyframes[1].bottomY, keyframes[2].bottomY, normalizedIntensity),
                         centerY: 30,
                         centerX: 8
                     };
@@ -509,9 +475,10 @@
         
         // Update path with the current shape state
         function updatePath(path, state) {
-            // Create the path for the R shape with animation
-            // Based on the original path: "M15 30C1.6278 35.8581 13.8786 46.6175 8 60C2.12138 46.6175 13.3619 35.8581 0 30C13.3722 24.1419 2.12138 13.3825 8 0C13.8786 13.3825 1.63809 24.1419 15 30Z"
+            // Get the current transform attribute to preserve positioning
+            const transform = path.getAttribute('transform');
             
+            // Create the path for the R shape with animation
             const newPath = `
                 M${state.rightX} ${state.centerY}
                 C${1.6278} ${35.8581} ${13.8786} ${46.6175} ${state.centerX} ${state.bottomY}
@@ -520,7 +487,7 @@
                 C${13.8786} ${13.3825} ${1.63809} ${24.1419} ${state.rightX} ${state.centerY}
             `.replace(/\s+/g, ' ').trim();
             
-            // Apply the new path
+            // Apply the new path while keeping the transform
             path.setAttribute('d', newPath);
         }
         
